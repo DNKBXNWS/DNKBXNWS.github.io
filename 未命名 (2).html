@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简洁亚克力风格页面</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 配置Tailwind自定义主题 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b5cf6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .acrylic {
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+            .acrylic-btn {
+                background: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                transition: all 0.3s ease;
+            }
+            .acrylic-btn:hover {
+                background: rgba(255, 255, 255, 0.4);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            }
+            .acrylic-btn:active {
+                transform: translateY(0);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-between p-4 md:p-6 overflow-x-hidden">
+    <!-- 背景图片 -->
+    <div class="fixed inset-0 z-0">
+        <img src="https://api.yuafeng.cn/API/ly/bing/" alt="Bing每日壁纸" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+
+    <!-- 顶部时间显示 -->
+    <header class="w-full max-w-6xl z-10 mb-6 md:mb-10">
+        <div class="acrylic rounded-xl p-4 md:p-6 text-center text-white shadow-lg flex flex-col md:flex-row items-center justify-center gap-4">
+            <h1 id="datetime" class="text-xl md:text-2xl lg:text-3xl font-bold tracking-wide"></h1>
+            <button id="secretBtn" class="acrylic-btn rounded-lg px-4 py-2 text-white hidden">
+                点击跳转
+            </button>
+        </div>
+    </header>
+
+    <!-- 主要内容：6x6按钮网格 -->
+    <main class="w-full max-w-6xl z-10 flex-grow">
+        <div class="grid grid-cols-6 gap-3 md:gap-4">
+            <!-- 36个可自定义文字的按钮 -->
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮1</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮2</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮3</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮4</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮5</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮6</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮7</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮8</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮9</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮10</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮11</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮12</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮13</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮14</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮15</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮16</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮17</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮18</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮19</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮20</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮21</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮22</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮23</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮24</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮25</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮26</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮27</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮28</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮29</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮30</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮31</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮32</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮33</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮34</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮35</button>
+            <button class="acrylic-btn rounded-lg aspect-square flex items-center justify-center text-white text-lg font-medium" onclick="window.location.href='html/exa.html'">按钮36</button>
+        </div>
+    </main>
+
+    <!-- 底部文字区域（恢复原位置） -->
+    <footer class="w-full max-w-6xl z-10 mt-8 md:mt-12 mb-4">
+        <div class="acrylic rounded-xl p-3 md:p-4 text-center">
+            <p id="footer-text" class="text-white text-sm md:text-base cursor-pointer transition-all duration-300 hover:text-primary">
+                加载中...
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 名言库（包含指定句子）
+        const quotes = [
+            "当你认为我做的不对，那么你就需要证明你是对的",
+            "生活就像海洋，只有意志坚强的人才能到达彼岸",
+            "成功的秘诀在于始终如一地忠于目标",
+            "知识是珍宝，但实践是得到它的钥匙",
+            "最困难的时候，就是我们离成功不远的时候"
+        ];
+
+        // 随机显示一句名言
+        function showRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('footer-text').textContent = quotes[randomIndex];
+        }
+
+        // 更新时间函数
+        function updateDateTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            // 星期几转换
+            const weekdays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            const weekday = weekdays[now.getDay()];
+            
+            const datetimeString = `${year}年${month}月${day}日 ${weekday} ${hours}:${minutes}:${seconds}`;
+            document.getElementById('datetime').textContent = datetimeString;
+        }
+        
+        // 初始化时间并每秒更新
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+        // 初始化显示随机名言
+        showRandomQuote();
+        
+        // 底部文字点击计数（达到5次显示秘密按钮）
+        let clickCount = 0;
+        const footerText = document.getElementById('footer-text');
+        const secretBtn = document.getElementById('secretBtn');
+        
+        footerText.addEventListener('click', () => {
+            clickCount++;
+            // 点击5次后显示秘密按钮
+            if (clickCount >= 5) {
+                secretBtn.classList.remove('hidden');
+            }
+        });
+        
+        // 修复跳转按钮功能（默认跳转到"没用/index.html"，可自行修改）
+        secretBtn.addEventListener('click', () => {
+            window.location.href = '没用/index.html';
+        });
+    </script>
+</body>
+</html>
